@@ -6,7 +6,7 @@ class Product {
     public $prezzo;
     public $sconto = NULL;
     public $prezzoFinale = NULL;
-    static $count = 0;
+    static protected $count = 0;
 
     public function __construct($nome, $prezzo) {
         $this->nomeProdotto = $nome;
