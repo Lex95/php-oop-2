@@ -5,13 +5,16 @@ class User {
     public $username;
     public $password;
     public $mail;
+    public $carrello = [];
+    public $carta;
     static protected $count = 0;
 
-    public function __construct($username, $password, $mail) {
+    public function __construct($username, $password, $mail, $carta) {
         $this->setId();
         $this->setUsername($username);
         $this->setPassword($password);
         $this->setMail($mail);
+        $this->carta = $carta;
     }
     private function setId() {
         $this->id = User::$count++;
@@ -36,6 +39,18 @@ class User {
     }
     public function getMail() {
         return $this->mail;
+    }
+    public function aggiungiAlCarrello($prodotto) {
+        $this->carrello[] = $prodotto;
+    }
+    public function getTotaleCarrello() {
+        $totale = 0;
+        foreach ($this->carrello as $prodotto => $value) {
+            if ($prodotto = "prezzo") {
+                $totale += $value;
+            }
+        }
+        return $totale;
     }
 }
 
