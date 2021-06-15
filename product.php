@@ -9,8 +9,8 @@ class Product {
     static protected $count = 0;
 
     public function __construct($nome, $prezzo) {
-        $this->nomeProdotto = $nome;
-        $this->prezzo = $prezzo;
+        $this->setNomeProdotto($nome);
+        $this->setPrezzo($prezzo);
         $this->setId();
     }
     private function setId() {

@@ -7,9 +7,9 @@ class Tv extends Product {
 
     public function __construct($nome, $prezzo, $marca, $modello, $pollici){
         Product::__construct($nome, $prezzo);
-        $this->marca = $marca;
-        $this->modello = $modello;
-        $this->pollici = $pollici;
+        $this->setMarca($marca);
+        $this->setModello($modello);
+        $this->setPollici($pollici);
     }
     public function setMarca($marca) {
         $this->marca = $marca;
