@@ -1,13 +1,12 @@
 <?php
 
-class Tv extends Product {
+class Smartphone extends Product {
     public $marca;
     public $modello;
     public $fotocamera;
 
-
-    public function __construct($nome, $prezzo, $marca, $modello, $fotocamera){
-        Product::__construct($nome, $prezzo);
+    public function __construct($marca, $modello, $prezzo, $fotocamera){
+        Product::__construct($marca . " " . $modello, $prezzo);
         $this->setMarca($marca);
         $this->setModello($modello);
         $this->setFotocamera($fotocamera);
