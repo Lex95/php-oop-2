@@ -9,6 +9,9 @@ class UserPremium extends User {
     public function getScontoPersonale() {
         return $this->scontoPersonale;
     }
+    public function applicaScontoPersonale($totale) {
+        return $totale - $this->scontoPersonale;
+    }
 }
 
 ?>

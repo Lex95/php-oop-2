@@ -40,14 +40,19 @@ class User {
     public function getMail() {
         return $this->mail;
     }
+    public function getCarta() {
+        return $this->carta;
+    }
     public function aggiungiAlCarrello($prodotto) {
         $this->carrello[] = $prodotto;
     }
     public function getTotaleCarrello() {
         $totale = 0;
-        foreach ($this->carrello as $prodotto => $value) {
-            if ($prodotto = "prezzo") {
-                $totale += $value;
+        for ($i = 0; $i < count($this->carrello); $i++) {
+            foreach ($this->carrello[$i] as $key => $value) {
+                if ($key = "prezzo") {
+                    $totale += (int)$value;
+                }
             }
         }
         return $totale;
