@@ -4,6 +4,7 @@ class UserPremium extends User {
     private $scontoPersonale;
 
     public function setScontoPersonale($scontoPersonale) {
+        $this->isValidNumber($scontoPersonale);
         $this->scontoPersonale = $scontoPersonale;
     }
     public function getScontoPersonale() {

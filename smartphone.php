@@ -24,6 +24,7 @@ class Smartphone extends Product {
         return $this->modello;
     }
     public function setFotocamera($fotocamera) {
+        $this->isValidNumber($fotocamera);
         $this->fotocamera = $fotocamera;
     }
     public function getFotocamera() {

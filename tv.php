@@ -24,6 +24,7 @@ class Tv extends Product {
         return $this->modello;
     }
     public function setPollici($pollici) {
+        $this->isValidNumber($pollici);
         $this->pollici = $pollici;
     }
     public function getPollici() {

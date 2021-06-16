@@ -1,5 +1,6 @@
 <?php
 
+require_once "validator.php";
 class User {
     protected $id;
     protected $username;
@@ -8,6 +9,8 @@ class User {
     protected $carrello = [];
     protected $carta;
     static protected $count = 0;
+
+    use Validator;
 
     public function __construct($username, $password, $mail, $carta) {
         $this->setId();
@@ -23,18 +26,21 @@ class User {
         return $this->id;
     }
     public function setUsername($username) {
+        $this->isValidName($username);
         $this->username = $username;
     }
     public function getUsername() {
         return $this->username;
     }
     public function setPassword($password) {
+        $this->isValidPsw($password);
         $this->password = $password;
     }
     public function getPassword() {
         return $this->password;
     }
     public function setMail($mail) {
+        $this->isValidMail($mail);
         $this->mail = $mail;
     }
     public function getMail() {
