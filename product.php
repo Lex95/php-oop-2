@@ -1,10 +1,10 @@
 <?php
 
 class Product {
-    public $id;
-    public $nomeProdotto;
-    public $prezzo;
-    public $sconto = NULL;
+    protected $id;
+    protected $nomeProdotto;
+    protected $prezzo;
+    protected $sconto = NULL;
     static protected $count = 0;
 
     public function __construct($nome, $prezzo) {

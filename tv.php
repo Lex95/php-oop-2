@@ -1,9 +1,9 @@
 <?php
 
 class Tv extends Product {
-    public $marca;
-    public $modello;
-    public $pollici;
+    private $marca;
+    private $modello;
+    private $pollici;
 
     public function __construct($marca, $modello, $prezzo, $pollici){
         Product::__construct($marca . " " . $modello, $prezzo);

@@ -1,12 +1,12 @@
 <?php
 
 class User {
-    public $id;
-    public $username;
-    public $password;
-    public $mail;
-    public $carrello = [];
-    public $carta;
+    protected $id;
+    protected $username;
+    protected $password;
+    protected $mail;
+    protected $carrello = [];
+    protected $carta;
     static protected $count = 0;
 
     public function __construct($username, $password, $mail, $carta) {

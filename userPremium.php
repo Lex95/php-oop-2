@@ -1,7 +1,7 @@
 <?php
 
 class UserPremium extends User {
-    public $scontoPersonale;
+    private $scontoPersonale;
 
     public function setScontoPersonale($scontoPersonale) {
         $this->scontoPersonale = $scontoPersonale;

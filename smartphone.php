@@ -1,9 +1,9 @@
 <?php
 
 class Smartphone extends Product {
-    public $marca;
-    public $modello;
-    public $fotocamera;
+    private $marca;
+    private $modello;
+    private $fotocamera;
 
     public function __construct($marca, $modello, $prezzo, $fotocamera){
         Product::__construct($marca . " " . $modello, $prezzo);

@@ -1,8 +1,8 @@
 <?php
 
 class creditCard {
-    public $nomeCarta;
-    public $saldo;
+    private $nomeCarta;
+    private $saldo;
 
     public function __construct($nome, $saldo) {
         $this->nomeCarta = $nome;
