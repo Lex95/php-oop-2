@@ -49,11 +49,7 @@ class User {
     public function getTotaleCarrello() {
         $totale = 0;
         for ($i = 0; $i < count($this->carrello); $i++) {
-            foreach ($this->carrello[$i] as $key => $value) {
-                if ($key = "prezzo") {
-                    $totale += (int)$value;
-                }
-            }
+            $totale += $this->carrello[$i]->getPrezzo();
         }
         return $totale;
     }
