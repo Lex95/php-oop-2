@@ -7,14 +7,17 @@ include "product.php";
 include "tv.php";
 include "smartphone.php";
 
-
-$utente1 = new User("Pippo", "pippo123", "pippo@gmail.com", new creditCard("Visa", 2000));
-$utente2 = new User("Pluto", "pluto123", "pluto@gmail.com", new creditCard("Mastercard", 1000));
-$utente3 = new UserPremium("Paperino", "paperino123", "paperino@gmail.com", new creditCard("Visa", 250));
-
-$prodotto1 = new Product("Impasto per pizza", 20);
-$prodotto2 = new Smartphone("Xiaomi", "Mi10", 300, 20);
-$prodotto3 = new Tv("Toshiba", "X123", 700, 50);
+try {
+    $utente1 = new User("Pippo", "pippo123", "pippo@gmail.com", new creditCard("Visa", 2000));
+    $utente2 = new User("Pluto", "pluto123", "pluto@gmail.com", new creditCard("Mastercard", 1000));
+    $utente3 = new UserPremium("Paperino", "paperino123", "paperino@gmail.com", new creditCard("Visa", 250));
+    
+    $prodotto1 = new Product("Impasto per pizza", 20);
+    $prodotto2 = new Smartphone("Xiaomi", "Mi10", 300, 20);
+    $prodotto3 = new Tv("Toshiba", "X123", 700, 50);
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
 
 ?>
 
